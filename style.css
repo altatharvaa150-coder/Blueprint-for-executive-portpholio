@@ -1745,3 +1745,241 @@ ul {
     padding: 0 1.2rem;
   }
 }
+
+/* ═══════════════════════════════════════════════════
+   ACHIEVEMENT-FIRST RESTRUCTURE — NEW SECTION STYLES
+   ═══════════════════════════════════════════════════ */
+
+/* ─── RESEARCH GRID ─── */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+}
+
+.research-card {
+  padding: 2rem 1.8rem;
+}
+
+.rc-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+
+.rc-desc {
+  font-size: .9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ─── PUBLICATIONS ─── */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+}
+
+.pub-item {
+  padding: 1.8rem 2rem;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .9rem;
+  flex-wrap: wrap;
+}
+
+.pub-type {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(225, 185, 60, .35);
+  padding: .2rem .7rem;
+  border-radius: 100px;
+}
+
+.cite-badge {
+  background: rgba(225, 185, 60, .12);
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .2rem .75rem;
+  border-radius: 100px;
+  letter-spacing: .06em;
+}
+
+.pub-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  font-size: .82rem;
+  color: var(--gold);
+  margin-bottom: .3rem;
+}
+
+.pub-venue {
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+
+.pub-note {
+  font-size: .8rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  font-style: italic;
+  opacity: .75;
+}
+
+/* ─── SPEAKING & CONSULTING ─── */
+.speaking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin-top: 2.4rem;
+}
+
+.speaking-card {
+  padding: 2rem 1.6rem;
+}
+
+.sk-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sk-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+
+.sk-desc {
+  font-size: .88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.speaking-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ─── TEACHING LEADERSHIP BLOCK ─── */
+.teaching-leader-block {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  padding: 2.5rem 2rem;
+}
+
+.tl-text {
+  flex: 1;
+}
+
+.tl-desc {
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.tl-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.2rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, .07);
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+.tl-sep {
+  color: var(--gold);
+  opacity: .4;
+}
+
+.tl-cta {
+  flex-shrink: 0;
+  padding-top: .5rem;
+}
+
+/* ─── IMPACT METRICS ─── */
+.impact-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.impact-metric {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+}
+
+.im-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.im-lbl {
+  font-size: .8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ─── RESPONSIVE — NEW SECTIONS ─── */
+@media (max-width: 640px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .speaking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .teaching-leader-block {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tl-cta {
+    width: 100%;
+  }
+
+  .tl-cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

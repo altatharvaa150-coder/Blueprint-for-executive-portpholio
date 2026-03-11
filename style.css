@@ -1078,8 +1078,16 @@ ul {
   cursor: pointer;
 }
 
-.pc-icon {
-  font-size: 2rem;
+.pc-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--gold);
+  opacity: 0.9;
+  transition: transform var(--transition);
+}
+
+.page-card:hover .pc-icon svg {
+  transform: translateY(-2px);
 }
 
 .pc-title {
@@ -1774,9 +1782,21 @@ ul {
 }
 
 .rc-icon {
-  font-size: 2.6rem;
   margin-bottom: 1.4rem;
   line-height: 1;
+}
+
+.rc-icon svg {
+  width: 36px;
+  height: 36px;
+  color: var(--gold);
+  opacity: 0.9;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.research-card:hover .rc-icon svg {
+  transform: scale(1.05);
+  color: var(--gold-bright);
 }
 
 .rc-title {
@@ -1877,9 +1897,20 @@ ul {
 }
 
 .sk-icon {
-  font-size: 2.4rem;
   margin-bottom: 1.4rem;
   line-height: 1;
+}
+
+.sk-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--gold);
+  opacity: 0.9;
+  transition: transform var(--transition);
+}
+
+.speaking-card:hover .sk-icon svg {
+  transform: translateY(-3px);
 }
 
 .sk-title {

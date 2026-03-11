@@ -1065,7 +1065,7 @@ ul {
 /* ─── HOME PAGE NAV CARDS ─── */
 .page-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1871,7 +1871,7 @@ ul {
 }
 
 .speaking-card {
-  padding: 3rem 2.4rem;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
 }

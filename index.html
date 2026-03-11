@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harjeet Jaggi — Ph.D. IIT Delhi | Physicist, Researcher & Educator | Pune</title>
+  <title>Harjeet Jaggi — Ph.D. IIT Delhi | Physicist, Researcher &amp; Educator | Pune</title>
   <meta name="description"
     content="Harjeet Jaggi — IIT Delhi Ph.D. physicist, researcher and educator with 12+ years of experience. Specialist in Physics, Chemistry and Mathematics for JEE, NEET and Class 11–12 in Pune." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,27 +13,34 @@
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <!-- Redirect desktop users to multi-page version -->
+  <script>
+    if (window.innerWidth >= 768) {
+      window.location.replace('desktop.html');
+    }
+  </script>
 </head>
 
 <body>
 
+  <!-- ═══ NAV ═══ -->
   <nav id="main-nav" role="navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">HJ<span class="accent">.</span></a>
+      <a href="#hero" class="nav-logo">HJ<span class="accent">.</span></a>
       <ul class="nav-links" id="nav-links-list">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="profile.html" class="nav-link">Profile</a></li>
-        <li><a href="teaching.html" class="nav-link">Teaching</a></li>
-        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Profile</a></li>
+        <li><a href="#subjects" class="nav-link" data-section="subjects">Teaching</a></li>
+        <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#enquiries" class="nav-link" data-section="enquiries">Contact</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section id="hero" class="hero-section" aria-label="Introduction">
     <div class="hero-grid-bg" aria-hidden="true"></div>
     <div class="container">
@@ -56,8 +63,8 @@
             Harjeet Jaggi brings research-grade rigour to every session.
           </p>
           <div class="hero-cta-group">
-            <a href="profile.html" class="btn btn-primary">Academic Profile</a>
-            <a href="teaching.html" class="btn btn-secondary">Teaching Areas</a>
+            <a href="#education" class="btn btn-primary">Academic Profile</a>
+            <a href="#subjects" class="btn btn-secondary">Teaching Areas</a>
           </div>
         </div>
 
@@ -69,49 +76,7 @@
     </div>
   </section>
 
-  <!-- PAGE NAV CARDS -->
-  <section class="section reveal" aria-label="Site Navigation">
-    <div class="container">
-      <div class="section-label">Explore</div>
-      <h2 class="section-heading">What You'll Find Here</h2>
-      <div class="page-cards" id="page-cards">
-
-        <a href="profile.html" class="page-card glass-card reveal-child" id="card-profile">
-          <div class="pc-icon" aria-hidden="true">🎓</div>
-          <div class="pc-title">Academic Profile</div>
-          <p class="pc-desc">Education at IIT Delhi and CUSAT, career journey from MIT Maharashtra to Delhi and Pune,
-            research background and philosophy.</p>
-          <span class="pc-link">View Profile →</span>
-        </a>
-
-        <a href="teaching.html" class="page-card glass-card reveal-child" id="card-teaching">
-          <div class="pc-icon" aria-hidden="true">📐</div>
-          <div class="pc-title">Teaching</div>
-          <p class="pc-desc">Physics, Chemistry and Mathematics for JEE, NEET and Class 11–12. Online classes, home
-            visits and in-person sessions.</p>
-          <span class="pc-link">See Teaching Areas →</span>
-        </a>
-
-        <a href="testimonials.html" class="page-card glass-card reveal-child" id="card-testimonials">
-          <div class="pc-icon" aria-hidden="true">💬</div>
-          <div class="pc-title">Testimonials</div>
-          <p class="pc-desc">Remarks shared by students who have studied under Harjeet Jaggi — in their own words.</p>
-          <span class="pc-link">Read Testimonials →</span>
-        </a>
-
-        <a href="contact.html" class="page-card glass-card reveal-child" id="card-contact">
-          <div class="pc-icon" aria-hidden="true">📍</div>
-          <div class="pc-title">Contact & Location</div>
-          <p class="pc-desc">Reach Harjeet Jaggi for class enquiries, online session scheduling, or academic
-            correspondence. Full address in Kondhwa, Pune.</p>
-          <span class="pc-link">Get In Touch →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK STATS STRIP -->
+  <!-- ═══ STATS STRIP ═══ -->
   <section class="section section-alt reveal" aria-label="At a Glance">
     <div class="container">
       <div class="stats-strip" id="stats-strip">
@@ -139,6 +104,592 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════
+       PROFILE — EDUCATION
+  ═══════════════════════════════════════ -->
+  <section id="education" class="section section-alt reveal" aria-label="Education">
+    <div class="container">
+      <div class="section-label">Qualifications</div>
+      <h2 class="section-heading">Educational Background</h2>
+      <div class="profile-grid">
+
+        <div class="profile-bio glass-card">
+          <p class="bio-text">
+            Harjeet Jaggi holds a <strong>Doctor of Philosophy (Ph.D.)</strong> and a
+            <strong>Master of Technology (M.Tech.)</strong> from the
+            <strong>Indian Institute of Technology, Delhi</strong> — one of India's foremost
+            centres of scientific and engineering research. His doctoral work focused on the
+            advanced study of materials science, encompassing polymer engineering and composite
+            material behaviour.
+          </p>
+          <p class="bio-text">
+            His undergraduate foundation was laid at the
+            <strong>Cochin University of Science &amp; Technology (CUSAT)</strong>, from which
+            he graduated with a <strong>Bachelor of Technology (B.Tech.)</strong> in 2009 —
+            beginning a trajectory that would carry him to the pinnacle of India's academic
+            establishment.
+          </p>
+
+          <div class="edu-block">
+            <div class="edu-heading">Degrees Conferred</div>
+            <div class="edu-item">
+              <span class="edu-dot" aria-hidden="true"></span>
+              <div>
+                <div class="edu-degree">Doctor of Philosophy (Ph.D.)</div>
+                <div class="edu-inst">Indian Institute of Technology, Delhi</div>
+                <div class="edu-year">Materials Science — Polymer &amp; Composite Engineering</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-dot" aria-hidden="true"></span>
+              <div>
+                <div class="edu-degree">Master of Technology (M.Tech.)</div>
+                <div class="edu-inst">Indian Institute of Technology, Delhi</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-dot" aria-hidden="true"></span>
+              <div>
+                <div class="edu-degree">Bachelor of Technology (B.Tech.)</div>
+                <div class="edu-inst">Cochin University of Science &amp; Technology (CUSAT)</div>
+                <div class="edu-year">2009</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div class="stat-card glass-card reveal-child">
+            <span class="stat-number">12<span class="stat-plus">+</span></span>
+            <span class="stat-label">Years Teaching</span>
+          </div>
+          <div class="stat-card glass-card reveal-child">
+            <span class="stat-number">IIT</span>
+            <span class="stat-label">Delhi Doctoral Graduate</span>
+          </div>
+          <div class="stat-card glass-card reveal-child">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Institutions Served</span>
+          </div>
+          <div class="stat-card glass-card reveal-child">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Major Cities</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER JOURNEY -->
+  <section id="journey" class="section reveal" aria-label="Career Journey">
+    <div class="container">
+      <div class="section-label">Career</div>
+      <h2 class="section-heading">The Journey</h2>
+
+      <div class="journey-timeline" id="journey-timeline">
+
+        <div class="jt-item reveal-child">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-year">2009 — 2011</div>
+          <div class="jt-card glass-card">
+            <h3 class="jt-title">Doctoral Research — IIT Delhi</h3>
+            <p class="jt-desc">
+              Following the completion of his undergraduate studies, Harjeet Jaggi was admitted to
+              IIT Delhi, where he pursued and completed both his M.Tech. and Ph.D. in materials
+              science. This period of intensive research formed the intellectual foundation upon
+              which his entire teaching practice is built — an understanding of science not merely
+              as a subject to be taught, but as a discipline to be practised.
+            </p>
+          </div>
+        </div>
+
+        <div class="jt-item reveal-child">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-year">Faculty — Maharashtra</div>
+          <div class="jt-card glass-card">
+            <h3 class="jt-title">Maharashtra Institute of Technology, Pune</h3>
+            <p class="jt-desc">
+              His first major teaching appointment was at the <strong>Maharashtra Institute of
+                Technology (MIT), Pune</strong>, where he spent two years as faculty. Immersed in
+              academia, he taught and mentored students of engineering and applied sciences —
+              developing his pedagogical approach and learning to translate complex doctoral-level
+              knowledge into clear, teachable concepts.
+            </p>
+          </div>
+        </div>
+
+        <div class="jt-item reveal-child">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-year">5 Years — Delhi</div>
+          <div class="jt-card glass-card">
+            <h3 class="jt-title">NEET Coaching Centre, Delhi</h3>
+            <p class="jt-desc">
+              Seeking broader impact, he relocated to Delhi and joined a prominent
+              <strong>NEET coaching centre</strong>, where he taught for five years. In this
+              high-pressure, results-oriented environment, he refined his teaching methodologies —
+              leveraging his understanding of Physics and Chemistry to help hundreds of aspiring
+              medical students prepare for one of India's most competitive examinations.
+            </p>
+          </div>
+        </div>
+
+        <div class="jt-item reveal-child">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-year">Present — Pune</div>
+          <div class="jt-card glass-card">
+            <h3 class="jt-title">Founder — Teaching Institute, Kondhwa, Pune</h3>
+            <p class="jt-desc">
+              Driven by a conviction that transformative education must be both rigorous and
+              personal, Harjeet Jaggi founded his own teaching institute in <strong>Kondhwa,
+                Pune</strong>. The institute has since produced students who have gained entry to
+              esteemed medical and engineering colleges across the country. Both online and
+              in-person modes of learning are offered.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="section section-alt reveal" aria-label="Philosophy">
+    <div class="container">
+      <div class="section-label">Philosophy</div>
+      <h2 class="section-heading">Approach to Education</h2>
+      <div class="philosophy-block">
+        <blockquote class="philosophy-quote glass-card">
+          <p class="pq-text">
+            "The goal is not merely to help students pass an examination — it is to equip them
+            with the confidence, curiosity, and conceptual clarity to carry their learning into
+            every challenge they encounter in higher education and beyond."
+          </p>
+          <footer class="pq-attr">— Harjeet Jaggi</footer>
+        </blockquote>
+        <div class="philosophy-points">
+          <div class="phil-point reveal-child glass-card">
+            <div class="pp-icon" aria-hidden="true">🔭</div>
+            <div>
+              <div class="pp-title">Conceptual Depth</div>
+              <p class="pp-desc">Every topic is taught from first principles — understanding the "why" before the "how".
+              </p>
+            </div>
+          </div>
+          <div class="phil-point reveal-child glass-card">
+            <div class="pp-icon" aria-hidden="true">🤝</div>
+            <div>
+              <div class="pp-title">Personalised Mentorship</div>
+              <p class="pp-desc">Each student's pace, strengths, and gaps are assessed individually.</p>
+            </div>
+          </div>
+          <div class="phil-point reveal-child glass-card">
+            <div class="pp-icon" aria-hidden="true">💻</div>
+            <div>
+              <div class="pp-title">Modern Teaching Tools</div>
+              <p class="pp-desc">Digital whiteboards and detailed PDF materials for every session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TEACHING
+  ═══════════════════════════════════════ -->
+  <section id="subjects" class="section reveal" aria-label="Subjects">
+    <div class="container">
+      <div class="section-label">Subjects &amp; Examinations</div>
+      <h2 class="section-heading">What Is Taught</h2>
+      <p class="teaches-intro">
+        With a doctoral background in physics and over 12 years of classroom experience,
+        Harjeet Jaggi offers rigorous instruction across three core subjects for students at
+        the senior secondary level and those preparing for national competitive examinations.
+      </p>
+
+      <div class="teaches-grid">
+        <div class="teach-card glass-card reveal-child">
+          <span class="teach-icon" aria-hidden="true">⚛️</span>
+          <div class="teach-subject">Engineering Entrance</div>
+          <div class="teach-exams">IIT JEE — Mains &amp; Advanced</div>
+          <div class="teach-boards">Regular Classes · Crash Course · Foundation · Online</div>
+        </div>
+        <div class="teach-card glass-card reveal-child">
+          <span class="teach-icon" aria-hidden="true">🔬</span>
+          <div class="teach-subject">Medical Entrance</div>
+          <div class="teach-exams">NEET-UG · Physics</div>
+          <div class="teach-boards">Extensive experience from Delhi coaching · Online available</div>
+        </div>
+        <div class="teach-card glass-card reveal-child">
+          <span class="teach-icon" aria-hidden="true">📐</span>
+          <div class="teach-subject">Class XII</div>
+          <div class="teach-exams">Physics &amp; Mathematics</div>
+          <div class="teach-boards">CBSE · ISC/ICSE · IB · AS/A Levels</div>
+        </div>
+        <div class="teach-card glass-card reveal-child">
+          <span class="teach-icon" aria-hidden="true">🧪</span>
+          <div class="teach-subject">Class XI</div>
+          <div class="teach-exams">Physics · Chemistry · Mathematics</div>
+          <div class="teach-boards">CBSE · ISC/ICSE · IB · AS/A Levels</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODES OF LEARNING -->
+  <section id="modes" class="section section-alt reveal" aria-label="Modes of Learning">
+    <div class="container">
+      <div class="section-label">Class Format</div>
+      <h2 class="section-heading">Modes of Learning</h2>
+      <p class="teaches-intro">
+        Both online and offline learning are supported, ensuring accessibility and
+        flexibility for students from diverse locations and schedules.
+      </p>
+
+      <div class="modes-grid" id="modes-grid">
+
+        <div class="mode-card glass-card reveal-child">
+          <div class="mode-icon" aria-hidden="true">💻</div>
+          <h3 class="mode-title">Online Classes</h3>
+          <p class="mode-desc">
+            Live, interactive sessions conducted via Zoom or equivalent platforms. Sessions
+            are not pre-recorded lectures — they are real-time, two-way interactions that mirror
+            the depth and rigour of in-person teaching. Digital whiteboards and shared PDF
+            materials are used to ensure concepts are reinforced visually.
+          </p>
+        </div>
+
+        <div class="mode-card glass-card reveal-child">
+          <div class="mode-icon" aria-hidden="true">🏠</div>
+          <h3 class="mode-title">Student's Home</h3>
+          <p class="mode-desc">
+            Home visit sessions are available for students within Pune. This arrangement
+            provides a comfortable, familiar learning environment and removes the need for
+            travel on the student's part — particularly suitable for younger students or those
+            with constraints on their schedule.
+          </p>
+        </div>
+
+        <div class="mode-card glass-card reveal-child">
+          <div class="mode-icon" aria-hidden="true">🏛️</div>
+          <h3 class="mode-title">Tutor's Institute</h3>
+          <p class="mode-desc">
+            Classes at the Kondhwa, Pune teaching centre offer a dedicated learning environment
+            equipped with whiteboard facilities, printed materials, and the atmosphere of a
+            focused academic setting. Group and individual sessions are both available.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING METHODS -->
+  <section id="methods" class="section reveal" aria-label="Teaching Methods">
+    <div class="container">
+      <div class="section-label">Methodology</div>
+      <h2 class="section-heading">How Sessions Are Conducted</h2>
+      <div class="methods-grid">
+
+        <div class="method-item reveal-child">
+          <div class="mi-number accent">01</div>
+          <div class="mi-content">
+            <h3 class="mi-title">Concept-First Approach</h3>
+            <p class="mi-desc">Every topic begins with foundational theory, ensuring that students
+              understand the principles behind a formula before applying it. This builds genuine
+              comprehension rather than surface memorisation.</p>
+          </div>
+        </div>
+
+        <div class="method-item reveal-child">
+          <div class="mi-number accent">02</div>
+          <div class="mi-content">
+            <h3 class="mi-title">Whiteboard &amp; Visual Instruction</h3>
+            <p class="mi-desc">Complex problems in mechanics, thermodynamics, and electromagnetism are
+              solved step-by-step on a whiteboard — allowing students to follow the reasoning process in
+              real time, not merely the answer.</p>
+          </div>
+        </div>
+
+        <div class="method-item reveal-child">
+          <div class="mi-number accent">03</div>
+          <div class="mi-content">
+            <h3 class="mi-title">Structured PDF Materials</h3>
+            <p class="mi-desc">Detailed, well-organised PDF notes and problem sets are shared with students
+              after each session, providing a reliable reference and enabling self-directed revision at
+              their own pace.</p>
+          </div>
+        </div>
+
+        <div class="method-item reveal-child">
+          <div class="mi-number accent">04</div>
+          <div class="mi-content">
+            <h3 class="mi-title">Regular Assessment &amp; Feedback</h3>
+            <p class="mi-desc">Progress is monitored through regular problem-solving exercises and
+              assessments. Feedback is specific, constructive, and aimed at strengthening areas of
+              weakness without undermining student confidence.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGY GALLERY -->
+  <section id="gallery" class="section section-alt reveal" aria-label="Methodology Gallery">
+    <div class="container">
+      <div class="section-label">In The Classroom</div>
+      <h2 class="section-heading">Methodology Gallery</h2>
+      <p class="teaches-intro">
+        A glimpse into the teaching environment — where complex theory is broken down
+        step-by-step using whiteboards, annotated diagrams, and structured visual aids.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-main reveal-child">
+          <img src="whiteboard.png" alt="Physics problem solved on a whiteboard — mechanics and kinematics"
+            class="gallery-img" />
+          <div class="gallery-caption">Whiteboard session — problem decomposition in mechanics</div>
+        </div>
+        <div class="gallery-side">
+          <div class="gallery-proof glass-card reveal-child">
+            <div class="gp-icon" aria-hidden="true">📋</div>
+            <div class="gp-title">Structured PDF Notes</div>
+            <p class="gp-desc">Every topic covered in class is followed by a two-page summary PDF —
+              formulae, solved examples, and common exam traps — shared with the student after each
+              session.</p>
+          </div>
+          <div class="gallery-proof glass-card reveal-child">
+            <div class="gp-icon" aria-hidden="true">🖊️</div>
+            <div class="gp-title">Live Problem Solving</div>
+            <p class="gp-desc">Problems are never "explained" — they are solved live in front of the
+              student, with every step narrated aloud. Students are then asked to reproduce the solution
+              independently before the session ends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section id="testimonials" class="section reveal" aria-label="Student Testimonials">
+    <div class="container">
+      <div class="section-label">Student Testimonials</div>
+      <h2 class="section-heading">What Students Say</h2>
+      <p class="testimonials-intro">
+        The following remarks have been shared by students who have studied under
+        Harjeet Jaggi across Class 12, JEE and NEET preparation programmes.
+      </p>
+
+      <div class="review-cards-full" id="review-cards">
+
+        <div class="review-card glass-card reveal-child">
+          <p class="review-text">
+            "Highly intellectual classes, with sir having profound knowledge of physics. Very
+            hospitable environment. Had a great experience with this great-hearted sir."
+          </p>
+          <div class="review-divider" aria-hidden="true"></div>
+          <div class="review-author">Jagjyot Singh</div>
+          <div class="review-course">Class XII — Physics</div>
+        </div>
+
+        <div class="review-card glass-card reveal-child">
+          <p class="review-text">
+            "Jaggi sir is an amazing and friendly teacher. He made physics feel like child's
+            play. It was an amazing experience to study under him."
+          </p>
+          <div class="review-divider" aria-hidden="true"></div>
+          <div class="review-author">Shivam Pandey</div>
+          <div class="review-course">Class XII — Physics</div>
+        </div>
+
+        <div class="review-card glass-card reveal-child">
+          <p class="review-text">
+            "Best physics teacher in Pune. Anyone who wants to pursue physics for Class 12 boards —
+            Jaggi Sir is the answer. He can also clear chemistry and maths doubts very well."
+          </p>
+          <div class="review-divider" aria-hidden="true"></div>
+          <div class="review-author">Mayank</div>
+          <div class="review-course">Class XII — Physics</div>
+        </div>
+
+        <div class="review-card glass-card reveal-child">
+          <p class="review-text">
+            "Excellent teacher with very good knowledge. He understands every child's capabilities
+            and helps them grow. Motivates students to always do better."
+          </p>
+          <div class="review-divider" aria-hidden="true"></div>
+          <div class="review-author">Archana Jadhav</div>
+          <div class="review-course">Class XII — Physics</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ALUMNI WALL -->
+  <section id="alumni" class="section section-alt reveal" aria-label="Alumni Success">
+    <div class="container">
+      <div class="section-label">Student Outcomes</div>
+      <h2 class="section-heading">Alumni Success</h2>
+      <p class="testimonials-intro">
+        Over 12 years, students taught by Harjeet Jaggi have gone on to gain entry
+        to esteemed medical and engineering institutions across India.
+        The entries below represent a selection of placements from his teaching tenure.
+      </p>
+      <div class="alumni-grid">
+        <div class="alumni-card glass-card reveal-child">
+          <div class="alum-institution">IIT — Indian Institutes of Technology</div>
+          <div class="alum-note">Multiple students placed through JEE Advanced</div>
+          <div class="alum-subject">Physics · Mathematics</div>
+        </div>
+        <div class="alumni-card glass-card reveal-child">
+          <div class="alum-institution">AIIMS &amp; National Medical Colleges</div>
+          <div class="alum-note">Students placed via NEET-UG in top government medical colleges</div>
+          <div class="alum-subject">Physics · Chemistry</div>
+        </div>
+        <div class="alumni-card glass-card reveal-child">
+          <div class="alum-institution">NITs — National Institutes of Technology</div>
+          <div class="alum-note">Students placed via JEE Mains across multiple NITs</div>
+          <div class="alum-subject">Physics · Mathematics</div>
+        </div>
+        <div class="alumni-card glass-card reveal-child">
+          <div class="alum-institution">State &amp; Deemed Universities</div>
+          <div class="alum-note">Students from CBSE, ICSE, IB boards placed in top colleges</div>
+          <div class="alum-subject">Physics · Chemistry · Mathematics</div>
+        </div>
+      </div>
+      <p class="alumni-note">* Specific names and colleges are withheld in the interest of student privacy.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="enquiries" class="section reveal" aria-label="Enquiries">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-heading">Enquiries</h2>
+
+      <div class="contact-grid">
+
+        <div class="contact-card glass-card reveal-child">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M6 18L20 8l14 10v16H6V18z" stroke="#e1b93c" stroke-width="1.7" stroke-linejoin="round" />
+            <rect x="15" y="26" width="10" height="8" rx="1" stroke="#e1b93c" stroke-width="1.7" />
+          </svg>
+          <div class="contact-type">Class Admissions</div>
+          <p class="contact-desc">
+            For information about enrolling in JEE, NEET, or Class 11–12 programmes,
+            including timetables, fees, available slots, and group or individual arrangements.
+          </p>
+          <a href="mailto:admissions@jaggiacademy.in" class="contact-link">admissions@jaggiacademy.in ↗</a>
+        </div>
+
+        <div class="contact-card glass-card reveal-child">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="6" y="10" width="28" height="20" rx="2" stroke="#e1b93c" stroke-width="1.7" />
+            <path d="M14 30l2 4h8l2-4" stroke="#e1b93c" stroke-width="1.7" stroke-linecap="round" />
+          </svg>
+          <div class="contact-type">Online Sessions</div>
+          <p class="contact-desc">
+            To schedule a Zoom-based online class or arrange a home-visit session within Pune.
+            Online sessions are available for students based anywhere in India.
+          </p>
+          <a href="mailto:admissions@jaggiacademy.in" class="contact-link">Schedule a Session ↗</a>
+        </div>
+
+        <div class="contact-card glass-card reveal-child">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="15" r="7" stroke="#e1b93c" stroke-width="1.7" />
+            <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#e1b93c" stroke-width="1.7"
+              stroke-linecap="round" />
+          </svg>
+          <div class="contact-type">Academic Correspondence</div>
+          <p class="contact-desc">
+            For research collaboration, institutional enquiries, or academic correspondence
+            related to materials science, polymer engineering, or physics education.
+          </p>
+          <a href="mailto:research@jaggiacademy.in" class="contact-link">research@jaggiacademy.in ↗</a>
+        </div>
+
+        <div class="contact-card glass-card reveal-child" id="contact-linkedin">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect x="5" y="5" width="30" height="30" rx="4" stroke="#e1b93c" stroke-width="1.7" />
+            <path d="M13 17v10M13 13v1" stroke="#e1b93c" stroke-width="2" stroke-linecap="round" />
+            <path d="M19 27v-5a3 3 0 016 0v5M19 17v10" stroke="#e1b93c" stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <div class="contact-type">LinkedIn</div>
+          <p class="contact-desc">
+            For professional networking, institutional outreach, or to view the full
+            academic and career history in a verified professional format.
+          </p>
+          <a href="https://www.linkedin.com/in/harjeet-jaggi" target="_blank" rel="noopener" class="contact-link">View
+            LinkedIn Profile ↗</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" class="section section-alt reveal" aria-label="Location">
+    <div class="container">
+      <div class="section-label">Location</div>
+      <h2 class="section-heading">Teaching Centre Address</h2>
+
+      <div class="location-grid">
+
+        <div class="location-details glass-card reveal-child">
+          <div class="loc-section">
+            <div class="loc-label">📍 Address</div>
+            <div class="loc-value">
+              Picasso Kedari Icon,<br />
+              Salunke Vihar Road, Wanowrie – Kondhwa,<br />
+              NIBM Road, opposite Reliance Fresh,<br />
+              Kondhwa, Pune — <strong>411040</strong>
+            </div>
+          </div>
+          <div class="loc-section">
+            <div class="loc-label">🗺️ Landmark</div>
+            <div class="loc-value">Near Badhai Sweets, Kondhwa</div>
+          </div>
+          <div class="loc-section">
+            <div class="loc-label">🕐 Availability</div>
+            <div class="loc-value">
+              Monday to Saturday &nbsp;·&nbsp; By appointment<br />
+              Online sessions available 7 days a week
+            </div>
+          </div>
+          <div class="loc-section">
+            <div class="loc-label">🌐 Online Reach</div>
+            <div class="loc-value">
+              Students from anywhere in India are welcome for online classes via Zoom.
+            </div>
+          </div>
+          <a href="https://www.google.com/maps/search/Picasso+Kedari+Icon+Kondhwa+Pune+411040" target="_blank"
+            rel="noopener noreferrer" class="btn btn-primary mt-2" style="display:inline-block; margin-top:1.5rem;">
+            Open in Google Maps ↗
+          </a>
+        </div>
+
+        <div class="map-embed reveal-child">
+          <iframe title="Harjeet Jaggi Teaching Centre Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.8!2d73.8819!3d18.4682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb0000000001%3A0x0!2sKondhwa%2C+Pune%2C+Maharashtra+411040!5e0!3m2!1sen!2sin!4v1700000000000"
+            width="100%" height="380"
+            style="border:0; border-radius:14px; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
   <footer id="site-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="footer-brand">
@@ -146,10 +697,11 @@
         <span class="footer-tagline">Ph.D. IIT Delhi · Educator · Pune</span>
       </div>
       <div class="footer-links">
-        <a href="profile.html">Profile</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="testimonials.html">Testimonials</a>
-        <a href="contact.html">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="#education">Profile</a>
+        <a href="#subjects">Teaching</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#enquiries">Contact</a>
         <a href="https://www.linkedin.com/in/harjeet-jaggi" target="_blank" rel="noopener"
           class="footer-linkedin">LinkedIn ↗</a>
       </div>

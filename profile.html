@@ -13,15 +13,17 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <!-- Redirect mobile to single-page -->
+    <script>if (window.innerWidth < 768) { window.location.replace('index.html'); }</script>
 </head>
 
 <body>
 
     <nav id="main-nav" role="navigation">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo">HJ<span class="accent">.</span></a>
+            <a href="desktop.html" class="nav-logo">HJ<span class="accent">.</span></a>
             <ul class="nav-links" id="nav-links-list">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="desktop.html" class="nav-link">Home</a></li>
                 <li><a href="profile.html" class="nav-link active">Profile</a></li>
                 <li><a href="teaching.html" class="nav-link">Teaching</a></li>
                 <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>

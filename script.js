@@ -1,5 +1,5 @@
 /* ════════════════════════════════════════════════════════════════
-   DR. HARJEET SINGH JAGGI — PORTFOLIO SCRIPTS
+   DR. HARJEET SINGH JAGGI — PORTFOLIO SCRIPTS  (single-page)
    ════════════════════════════════════════════════════════════════ */
 
 'use strict';
@@ -20,33 +20,41 @@
     const toggle = document.getElementById('nav-toggle-btn');
     const links = document.getElementById('nav-links-list');
     if (!toggle || !links) return;
+
     toggle.addEventListener('click', () => {
-        links.classList.toggle('open');
-        const isOpen = links.classList.contains('open');
+        const isOpen = links.classList.toggle('open');
         toggle.setAttribute('aria-expanded', isOpen);
     });
-    // Close when a link is clicked
+
+    // Close menu when any anchor link is tapped (single-page scroll)
     links.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => links.classList.remove('open'));
+        link.addEventListener('click', () => {
+            links.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
     });
 })();
 
-/* ─── ACTIVE NAV HIGHLIGHT ─── */
+/* ─── ACTIVE NAV HIGHLIGHT (single-page) ─── */
 (function initActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link[data-section]');
+    if (!navLinks.length) return;
+
+    // Build map: section-id → nav link
     const navMap = {};
     navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.startsWith('#')) navMap[href.slice(1)] = link;
+        const sec = link.getAttribute('data-section');
+        if (sec) navMap[sec] = link;
     });
+
+    const sections = document.querySelectorAll('section[id]');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 navLinks.forEach(l => l.classList.remove('active'));
-                const activeLink = navMap[entry.target.id];
-                if (activeLink) activeLink.classList.add('active');
+                const active = navMap[entry.target.id];
+                if (active) active.classList.add('active');
             }
         });
     }, { rootMargin: '-40% 0px -55% 0px' });
@@ -58,64 +66,19 @@
 (function initReveal() {
     const items = document.querySelectorAll('.reveal, .reveal-child');
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Stagger reveal-child items within the same parent
                 const delay = entry.target.classList.contains('reveal-child')
-                    ? Array.from(entry.target.parentElement.querySelectorAll('.reveal-child')).indexOf(entry.target) * 120
+                    ? Array.from(entry.target.parentElement.querySelectorAll('.reveal-child'))
+                        .indexOf(entry.target) * 120
                     : 0;
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, delay);
+                setTimeout(() => entry.target.classList.add('visible'), delay);
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.12 });
 
     items.forEach(item => observer.observe(item));
-})();
-
-/* ─── HERO TYPING EFFECT ─── */
-(function initTyping() {
-    const el = document.getElementById('hero-typed');
-    if (!el) return;
-
-    const phrases = [
-        'JEE & NEET Coaching.',
-        'Physics Made Simple.',
-        'IIT Delhi Trained.',
-        'Kondhwa, Pune.',
-    ];
-    let phraseIdx = 0;
-    let charIdx = 0;
-    let deleting = false;
-    let timer;
-
-    const type = () => {
-        const current = phrases[phraseIdx];
-        if (!deleting) {
-            charIdx++;
-            el.textContent = current.slice(0, charIdx);
-            if (charIdx === current.length) {
-                deleting = true;
-                timer = setTimeout(type, 2200); // pause before deleting
-                return;
-            }
-        } else {
-            charIdx--;
-            el.textContent = current.slice(0, charIdx);
-            if (charIdx === 0) {
-                deleting = false;
-                phraseIdx = (phraseIdx + 1) % phrases.length;
-                timer = setTimeout(type, 400);
-                return;
-            }
-        }
-        timer = setTimeout(type, deleting ? 55 : 90);
-    };
-
-    // Start after a short delay for dramatic effect
-    timer = setTimeout(type, 1200);
 })();
 
 /* ─── PUBLICATION TABLE — CITATION COUNTER ─── */
@@ -142,7 +105,7 @@
     });
 })();
 
-/* ─── SMOOTH SCROLL — POLYFILL FOR OLDER SAFARI ─── */
+/* ─── SMOOTH SCROLL ─── */
 (function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

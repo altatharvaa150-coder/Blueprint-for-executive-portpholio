@@ -1386,6 +1386,9 @@ ul {
 }
 
 .loc-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
